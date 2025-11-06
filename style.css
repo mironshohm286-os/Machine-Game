@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    user-select: none;
+}
+
+#card {
+    width: 400px;
+    background-color: #3f7d20;
+    border: 3px solid #9cc760;
+    box-shadow: 0 0 30px #9cc760;
+    border-radius: 10px;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+#card h1 {
+    color: #eca72c;
+    display: none;
+}
+
+#game-bar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+#game-bar .number{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(130deg, #000000af, #00000081);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+}
+
+#start {
+    padding: 30px 13px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 1px solid #e5383b;
+    background-color: #e5383b;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#start:hover {
+    background-color: #660708;
+    border-color: #660708;
+}
+
+#show-balance {
+    padding: 30px 6px;
+    font-size: 20px;
+    border-radius: 50%;
+     border: 1px solid #0353a4;
+    background-color: #0353a4;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif    ;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#show-balance:hover {
+    background-color: #001233;
+    border-color: #001233;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(160deg, #ffffffd0, #000000b4);
+    border-radius: 50%;
+    animation: circle 1s linear infinite;
+    display: none;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#card p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+#loader-one {
+    top: 16%;
+    left: 16%;
+}
+
+#loader-two {
+    top: 16%;
+    left: 45%;
+}
+
+#loader-three {
+    top: 16%;
+    left: 74%;
+}
+
+#balance-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff15;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    position: fixed;
+    z-index: 1000;
+    width: 500px;
+    background-color: #000;
+    padding: 70px 40px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+}
+
+#container h1 {
+    font-size: 50px;
+    
+}
+
+#container button {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 7px 150px;
+    margin-top: 20px;
+    background-color: #000;
+    color: #660708;
+    border: 3px solid #660708;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#container button:hover {
+    transform: scale(1.04);
+    background-color: #660708;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    #card {
+        width: 320px;
+        padding: 20px;
+    }
+
+    #game-bar .number {
+        width: 80px;
+        height: 80px;
+        font-size: 45px;
+    }
+
+    #start,
+    #show-balance {
+        padding: 20px 10px;
+        font-size: 16px;
+    }
+
+    #card p {
+        font-size: 18px;
+    }
+
+    #container {
+        width: 300px;
+        padding: 40px 20px;
+    }
+
+    #container h1 {
+        font-size: 30px;
+    }
+
+    #container button {
+        font-size: 18px;
+        padding: 8px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #card {
+        width: 280px;
+        padding: 15px;
+    }
+
+    #game-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #game-bar .number {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+    }
+
+    #start,
+    #show-balance {
+        margin-top: 10px;
+        padding: 15px 8px;
+        font-size: 14px;
+    }
+
+    #card p {
+        font-size: 16px;
+    }
+
+    #container {
+        width: 260px;
+        padding: 30px 15px;
+    }
+
+    #container h1 {
+        font-size: 25px;
+    }
+
+    #container button {
+        font-size: 16px;
+        padding: 7px 40px;
+    }
+}
